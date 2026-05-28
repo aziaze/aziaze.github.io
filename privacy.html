@@ -35,7 +35,7 @@
 </div>
 
 <h1>Privacy Policy</h1>
-<p class="meta"><strong>Last updated:</strong> April 28, 2026</p>
+<p class="meta"><strong>Last updated:</strong> May 29, 2026</p>
 
 <p>This Privacy Policy describes how Pilna ("we", "our", or "the app") handles information when you use our mobile application. This policy applies to the Pilna iOS application developed and operated by <strong>Ivan Tsviatkou</strong>, a sole proprietor registered in Poland (hereinafter "the Developer").</p>
 
@@ -68,9 +68,9 @@ Sole Proprietor registered in Poland</p>
   <li>App preferences (default currency, theme, font, notification settings)</li>
 </ul>
 
-<p>This data is stored in your device's local storage (AsyncStorage). <strong>We do not have access to this data.</strong> It does not leave your device unless you explicitly enable iCloud Sync (see Section 3.5).</p>
+<p>This data is stored locally by the app on your device. <strong>We do not have access to this data</strong>, and we do not transmit it to our servers or analytics providers.</p>
 
-<p>You can delete all app data at any time from within the app settings.</p>
+<p>You can delete all app data at any time by deleting the app.</p>
 
 <h3>3.2 Analytics Data (Mixpanel)</h3>
 
@@ -95,21 +95,43 @@ Sole Proprietor registered in Poland</p>
 
 <p>Mixpanel servers are located in the European Union. For more information, see Mixpanel's privacy policy: <a href="https://mixpanel.com/legal/privacy-policy/">https://mixpanel.com/legal/privacy-policy/</a></p>
 
-<h3>3.3 Purchase Data (RevenueCat)</h3>
+<h3>3.3 Analytics Data (Google Analytics for Firebase)</h3>
+
+<p>In addition to Mixpanel, we use <strong>Google Analytics for Firebase</strong> (provided by Google LLC) to understand app usage and to measure the effectiveness of our advertising campaigns. Firebase may collect similar anonymous app events, such as:</p>
+
+<ul>
+  <li>App events (app opens, subscription added, review session completed, purchase completed)</li>
+  <li>Device type and model, operating system version, app version</li>
+  <li>Anonymous identifier (Firebase App Instance ID) generated on your device — not linked to your personal identity</li>
+  <li>Approximate geographic region</li>
+</ul>
+
+<p><strong>We do not collect through Firebase:</strong></p>
+
+<ul>
+  <li>Your name, email, or any personal contact information</li>
+  <li>Your subscription names, prices, or any subscription-specific details</li>
+  <li>Precise location</li>
+</ul>
+
+<p>Firebase Analytics data is processed by Google in the United States. For more information, see Google's privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+
+<h3>3.4 Purchase Data (RevenueCat)</h3>
 
 <p>We use <strong>RevenueCat</strong> to manage in-app purchases. Pilna offers a one-time non-consumable purchase to unlock premium features (lifetime access — no recurring charges). When you make or restore a purchase, RevenueCat processes:</p>
 
 <ul>
   <li>Apple-provided transaction identifiers</li>
-  <li>Anonymous user identifier (shared with Mixpanel distinct_id for correlation)</li>
+  <li>Anonymous app user identifiers used to connect purchase status with app analytics</li>
   <li>Purchase status (active, refunded)</li>
+  <li>Firebase App Instance ID, linked as a customer attribute to correlate purchases with anonymous analytics</li>
 </ul>
 
 <p>RevenueCat does not receive your name, email, Apple ID, or payment details. Payment processing is handled entirely by Apple.</p>
 
 <p>For more information, see RevenueCat's privacy policy: <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a></p>
 
-<h3>3.4 Crash and Error Reporting (Sentry)</h3>
+<h3>3.5 Crash and Error Reporting (Sentry)</h3>
 
 <p>We use <strong>Sentry</strong> to detect crashes and errors in the app. When an error occurs, Sentry may collect:</p>
 
@@ -124,15 +146,19 @@ Sole Proprietor registered in Poland</p>
 
 <p>For more information, see Sentry's privacy policy: <a href="https://sentry.io/privacy/">https://sentry.io/privacy/</a></p>
 
-<h3>3.5 iCloud Sync (Optional)</h3>
+<h2>4. App Tracking Transparency and Advertising Attribution</h2>
 
-<p>If you enable iCloud Sync in Settings, your subscription data and app preferences will be synchronized between your Apple devices using Apple's iCloud service. This data is encrypted in transit and at rest by Apple, and we do not have access to it. iCloud Sync is optional and disabled by default.</p>
+<p>Pilna may ask for your permission to track your activity across other companies' apps and websites, as required by Apple's App Tracking Transparency framework.</p>
 
-<p>For more information on iCloud privacy, see Apple's policy: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></p>
+<p><strong>If you allow tracking:</strong> Google may receive your device's advertising identifier (IDFA) through the Google/Firebase SDKs to measure which advertisement, if any, led to your installation of Pilna. The IDFA is a random identifier provided by Apple and does not contain your name or personal information. This information is used solely to measure the performance of our advertising and helps us spend our marketing budget responsibly.</p>
 
-<h2>4. App Tracking Transparency and Cross-App Tracking</h2>
+<p><strong>If you decline tracking:</strong> No IDFA is shared for this purpose. Advertising attribution may still be measured using Apple's SKAdNetwork framework, which provides anonymous, aggregated campaign-level signals and does not include personal information or the IDFA.</p>
 
-<p>We do not request App Tracking Transparency (ATT) permission and do not track you across apps or websites owned by other companies. We may use Apple Search Ads attribution (via Apple's AdServices framework) to measure the effectiveness of our own advertising campaigns — this does not involve IDFA or cross-app tracking.</p>
+<p>You can change your tracking choice at any time in <strong>iOS Settings → Privacy &amp; Security → Tracking → Pilna</strong>.</p>
+
+<p>We also use Apple Search Ads attribution via Apple's AdServices framework to measure the effectiveness of our advertising on the App Store. This does not involve IDFA or cross-app tracking.</p>
+
+<p>We do not show advertisements inside Pilna. We do not sell your data to advertisers or anyone else.</p>
 
 <h2>5. Why We Process This Data</h2>
 
@@ -143,27 +169,29 @@ Sole Proprietor registered in Poland</p>
   <li><strong>To improve the app</strong> (understanding which features are used, fixing bugs, planning improvements)</li>
   <li><strong>To process purchases</strong> (validating in-app purchases through Apple's App Store and RevenueCat)</li>
   <li><strong>To ensure app stability</strong> (detecting and fixing crashes via Sentry)</li>
+  <li><strong>To measure the effectiveness of our advertising</strong> (so we can spend our marketing budget responsibly)</li>
 </ul>
 
 <p>Our legal basis under GDPR is:</p>
 
 <ul>
-  <li><strong>Legitimate interest</strong> (Article 6(1)(f)) — for analytics and crash reporting, to operate and improve a functional product</li>
+  <li><strong>Legitimate interest</strong> (Article 6(1)(f)) — for analytics, crash reporting, non-IDFA advertising attribution, and app improvement</li>
   <li><strong>Contract performance</strong> (Article 6(1)(b)) — for processing in-app purchases you initiate</li>
-  <li><strong>Consent</strong> (Article 6(1)(a)) — if you enable iCloud Sync or opt into specific tracking</li>
+  <li><strong>Consent</strong> (Article 6(1)(a)) — for IDFA-based advertising attribution, granted through Apple's App Tracking Transparency framework (see Section 4)</li>
 </ul>
 
 <h2>6. Data Sharing and Transfers</h2>
 
-<p>We do not sell your data. We share limited data only with the service providers named above (Mixpanel, RevenueCat, Sentry, Apple) as strictly necessary to operate the app.</p>
+<p>We do not sell your data. We share limited data only with the service providers named above (Mixpanel, Google, RevenueCat, Sentry, Apple) as strictly necessary to operate the app and measure our advertising.</p>
 
-<p><strong>International transfers:</strong> Some of our service providers are based outside the European Union (e.g., RevenueCat and Sentry in the United States). These transfers are protected by standard contractual clauses or other mechanisms approved under GDPR Article 46.</p>
+<p><strong>International transfers:</strong> Some of our service providers process data outside the European Union: Google (Firebase Analytics and advertising attribution) and RevenueCat in the United States. Mixpanel and Sentry process data within the European Union. International transfers are protected by standard contractual clauses or other mechanisms approved under GDPR Article 46, including the EU-US Data Privacy Framework where applicable.</p>
 
 <h2>7. How Long We Keep Data</h2>
 
 <ul>
-  <li><strong>Local device data:</strong> remains on your device until you delete the app or clear app data. You can delete all data at any time from Settings.</li>
-  <li><strong>Analytics data (Mixpanel):</strong> retained for 2–5 years in aggregated form, then deleted.</li>
+  <li><strong>Local device data:</strong> remains on your device until you delete the app. You can delete all data at any time by deleting the app.</li>
+  <li><strong>Analytics data (Mixpanel):</strong> retained according to Mixpanel's default retention period, currently up to 5 years.</li>
+  <li><strong>Analytics data (Firebase):</strong> retained according to Google's default Firebase Analytics retention settings (typically 14 months), then deleted.</li>
   <li><strong>Purchase data (RevenueCat):</strong> retained as required for accounting and Apple platform compliance, typically 7 years.</li>
   <li><strong>Crash reports (Sentry):</strong> retained for 90 days, then deleted.</li>
 </ul>
@@ -184,6 +212,8 @@ Sole Proprietor registered in Poland</p>
 </ul>
 
 <p>To exercise any of these rights, email us at <a href="mailto:ivan.tsviatkou.pl@gmail.com"><strong>ivan.tsviatkou.pl@gmail.com</strong></a>. We will respond within 30 days.</p>
+
+<p>To stop sharing your device advertising identifier (IDFA) with Google, you can disable tracking for Pilna at any time in <strong>iOS Settings → Privacy &amp; Security → Tracking → Pilna</strong>. This will not affect other functionality of the app.</p>
 
 <p><strong>Note:</strong> Because we do not collect personal identifiers, in some cases we may not be able to identify which data relates to you specifically. In that case, we will explain what data categories we process and how you can delete your local data through the app.</p>
 
